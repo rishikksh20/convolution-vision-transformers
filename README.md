@@ -27,3 +27,5 @@ print("Shape of out :", out.shape)  # [B, num_classes]
       primaryClass={cs.CV}
 }
 ```
+## Acknowledgement:
+* Base ViT code is borrowed from [@lucidrains](https://github.com/lucidrains) repo : https://github.com/lucidrains/vit-pytorch
