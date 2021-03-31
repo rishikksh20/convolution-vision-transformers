@@ -1,9 +1,6 @@
 import torch
 from torch import nn, einsum
-import torch.nn.functional as F
-
-from einops import rearrange, repeat
-from einops.layers.torch import Rearrange
+from einops import rearrange
 
 
 class SepConv2d(torch.nn.Module):
@@ -22,10 +19,12 @@ class SepConv2d(torch.nn.Module):
                                          padding=padding,
                                          dilation=dilation,
                                          groups=in_channels)
+        self.bn = torch.nn.BatchNorm2d(in_channels)
         self.pointwise = torch.nn.Conv2d(in_channels, out_channels, kernel_size=1)
 
     def forward(self, x):
         x = self.depthwise(x)
+        x = self.bn(x)
         x = self.pointwise(x)
         return x
 

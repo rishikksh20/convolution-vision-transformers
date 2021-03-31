@@ -1,7 +1,6 @@
 import torch
-from torch import nn, einsum
-import torch.nn.functional as F
-from einops import rearrange, repeat
+from torch import nn
+from einops import repeat
 from einops.layers.torch import Rearrange
 from module import ConvAttention, PreNorm, FeedForward
 import numpy as np
