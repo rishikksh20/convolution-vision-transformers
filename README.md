@@ -1,5 +1,5 @@
 # CvT: Introducing Convolutions to Vision Transformers
-Pytorch implementation of [CvT: Introducing Convolutions to Vision Transformers](https://arxiv.org/abs/2103.15808)
+Pytorch implementation of [CvT: Introducing Convolutions to Vision Transformers](https://arxiv.org/abs/2103.15808) , for official repo please visit [here](https://github.com/microsoft/CvT).
 ![](assets/model.PNG)
 
 ## Usage:
